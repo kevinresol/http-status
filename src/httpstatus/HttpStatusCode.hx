@@ -65,4 +65,7 @@ abstract HttpStatusCode(Int) from Int to Int {
 	var NotExtended = 510;
 	var NetworkAuthenticationRequired = 511;
 	
+	@:to
+	public inline function toMessage():HttpStatusMessage
+		return new HttpStatusMessage(this);
 }
