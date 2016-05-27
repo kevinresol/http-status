@@ -6,7 +6,7 @@
   "tags":["http", "status"],
   "description": "List of HTTP status codes and reasons",
   "contributors": ["kevinresol"],
-  "releasenote": "Initial release",
-  "version": "1.0.0",
+  "releasenote": "Added toMessage()",
+  "version": "1.1.0",
   "dependencies": {}
 }
