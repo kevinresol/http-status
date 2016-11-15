@@ -1,7 +1,7 @@
 package httpstatus;
 
 @:enum
-abstract HttpStatusCode(Int) from Int to Int {
+abstract HttpStatusCode(Int) from Int {
 	
 	var Continue = 100;
 	var SwitchingProtocols = 101;
@@ -68,4 +68,8 @@ abstract HttpStatusCode(Int) from Int to Int {
 	@:to
 	public inline function toMessage():HttpStatusMessage
 		return new HttpStatusMessage(this);
+	
+	@:to
+	public inline function toInt():Int
+		return this;
 }
