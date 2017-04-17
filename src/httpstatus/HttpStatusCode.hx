@@ -72,4 +72,19 @@ abstract HttpStatusCode(Int) from Int {
 	@:to
 	public inline function toInt():Int
 		return this;
+	
+	#if tink_web
+	@:to
+	public inline function toWebResponse():tink.web.routing.Response
+		return toOutgoingResponse();
+	#end
+	
+	#if tink_http
+	@:to
+	public function toOutgoingResponse():tink.http.Response.OutgoingResponse
+		return new tink.http.Response.OutgoingResponse(
+			new tink.http.Response.ResponseHeader(toInt(), toMessage(), []),
+			''
+		);
+	#end
 }
