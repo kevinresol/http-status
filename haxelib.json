@@ -6,7 +6,7 @@
   "tags":["http", "status"],
   "description": "List of HTTP status codes and reasons",
   "contributors": ["kevinresol"],
-  "releasenote": "Cast to http responses",
-  "version": "1.2.0",
+  "releasenote": "Cast from http responses",
+  "version": "1.2.1",
   "dependencies": {}
 }
