@@ -86,5 +86,8 @@ abstract HttpStatusCode(Int) from Int {
 			new tink.http.Response.ResponseHeader(toInt(), toMessage(), []),
 			''
 		);
+	@:from
+	public static inline function fromIncomingResponse(res:tink.http.Response.IncomingResponse):HttpStatusCode
+		return res.header.statusCode;
 	#end
 }
