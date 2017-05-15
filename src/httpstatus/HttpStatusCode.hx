@@ -73,6 +73,12 @@ abstract HttpStatusCode(Int) from Int {
 	public inline function toInt():Int
 		return this;
 	
+	#if tink_core
+	@:from
+	public static inline function fromErrorCode(code:tink.core.Error.ErrorCode):HttpStatusCode
+		return (code:Int);
+	#end
+	
 	#if tink_web
 	@:to
 	public inline function toWebResponse():tink.web.routing.Response
