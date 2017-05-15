@@ -1,12 +1,17 @@
 {
-  "name": "http-status",
-  "url": "https://github.com/kevinresol/http-status",
-  "license": "MIT",
-  "classPath": "src",
-  "tags":["http", "status"],
-  "description": "List of HTTP status codes and reasons",
-  "contributors": ["kevinresol"],
-  "releasenote": "Cast from http responses",
-  "version": "1.2.1",
-  "dependencies": {}
+	"name": "http-status",
+	"license": "MIT",
+	"tags": [
+		"http",
+		"status"
+	],
+	"classPath": "src",
+	"description": "List of HTTP status codes and reasons",
+	"contributors": [
+		"kevinresol"
+	],
+	"releasenote": "Case from tink error",
+	"version": "1.2.2",
+	"url": "https://github.com/kevinresol/http-status",
+	"dependencies": {}
 }
