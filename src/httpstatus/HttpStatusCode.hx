@@ -1,7 +1,7 @@
 package httpstatus;
 
 @:enum
-abstract HttpStatusCode(Int) from Int {
+abstract HttpStatusCode(Int) from Int to Int {
 	
 	var Continue = 100;
 	var SwitchingProtocols = 101;
@@ -69,9 +69,12 @@ abstract HttpStatusCode(Int) from Int {
 	public inline function toMessage():HttpStatusMessage
 		return new HttpStatusMessage(this);
 	
-	@:to
-	public inline function toInt():Int
-		return this;
+	@:op(A>B) static function gt<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
+	@:op(A<B) static function lt<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
+	@:op(A>=B) static function gte<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
+	@:op(A>=B) static function lte<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
+	@:op(A==B) static function eq<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
+	@:op(A!=B) static function neq<T>(a:HttpStatusCode, b:HttpStatusCode):Bool;
 	
 	#if tink_core
 	@:from
