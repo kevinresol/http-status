@@ -97,8 +97,8 @@ abstract HttpStatusCode(Int) from Int {
 	@:to
 	public function toOutgoingResponse():tink.http.Response.OutgoingResponse
 		return new tink.http.Response.OutgoingResponse(
-			new tink.http.Response.ResponseHeader(toInt(), toMessage(), [new tink.http.Header.HeaderField(CONTENT_LENGTH, '0')]),
-			tink.io.Source.EMPTY
+			new tink.http.Response.ResponseHeader(toInt(), toMessage(), [new tink.http.Header.HeaderField('content-length', '0')]),
+			#if pure tink.io.Source.EMPTY #else '' #end
 		);
 	@:from
 	public static inline function fromIncomingResponse(res:tink.http.Response.IncomingResponse):HttpStatusCode
