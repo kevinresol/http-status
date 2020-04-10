@@ -52,7 +52,10 @@ abstract HttpStatusCode(Int) from Int {
 	var PreconditionRequired = 428;
 	var TooManyRequests = 429;
 	var RequestHeaderFieldsTooLarge = 431;
-	// var SessionTimeout = 440;            // look into httpstatus.unofficial.Microsoft!
+	// var SessionTimeout = 440;             // see Microsoft.hx
+	// var RetryWith = 449;                  // see Microsoft.hx
+	// var BlockedByParentalControl = 450;   // see Microsoft.hx
+	// var ExchangeActiveSyncRedirect = 451; // see Microsoft.hx
 	var UnavailableForLegalReasons = 451;
 	var InternalServerError = 500;
 	var NotImplemented = 501;
