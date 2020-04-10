@@ -56,7 +56,7 @@ abstract HttpStatusMessage(String) from String to String {
 			case 428: 'Precondition Required';
 			case 429: 'Too Many Requests';
 			case 431: 'Request Header Fields Too Large';
-			case 440: 'Client Session Expired Must Log In Again';
+			// case 440: 'Client Session Expired Must Log In Again';    // look into httpstatus.unofficial.Microsoft!
 			case 451: 'Unavailable For Legal Reasons';
 			case 500: 'Internal Server Error';
 			case 501: 'Not Implemented';

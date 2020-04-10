@@ -52,7 +52,7 @@ abstract HttpStatusCode(Int) from Int {
 	var PreconditionRequired = 428;
 	var TooManyRequests = 429;
 	var RequestHeaderFieldsTooLarge = 431;
-	var SessionTimeout = 440;
+	// var SessionTimeout = 440;            // look into httpstatus.unofficial.Microsoft!
 	var UnavailableForLegalReasons = 451;
 	var InternalServerError = 500;
 	var NotImplemented = 501;
