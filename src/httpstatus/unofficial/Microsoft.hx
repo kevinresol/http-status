@@ -24,4 +24,8 @@ abstract Microsoft(HttpStatusCode) from HttpStatusCode {
         }
     }
 
+    #if tink_core
+    @:from public static inline function fromErrorCode(code:tink.core.Error.ErrorCode):Microsoft return (code:Int);
+    #end
+
 }
