@@ -8,6 +8,8 @@ abstract Microsoft(HttpStatusCode) from HttpStatusCode {
 
     var SessionTimeout = 440;
 
+    @:to public function toInt() : Int return this;
+
     @:to public function toStatusCode():HttpStatusCode return this;
     @:to public function toStatusMessage():HttpStatusMessage {
         return switch this {
@@ -15,4 +17,5 @@ abstract Microsoft(HttpStatusCode) from HttpStatusCode {
             default: this.toMessage();
         } 
     }
+
 }
