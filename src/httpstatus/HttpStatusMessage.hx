@@ -56,6 +56,10 @@ abstract HttpStatusMessage(String) from String to String {
 			case 428: 'Precondition Required';
 			case 429: 'Too Many Requests';
 			case 431: 'Request Header Fields Too Large';
+			// case 440: 'Client Session Expired Must Log In Again';       // see Microsoft.hx
+			// case 449: 'User Has Not Provided The Required Information'; // see Microsoft.hx
+			// case 450: 'Blocked By Parental Control';                    // see Microsoft.hx
+			// case 451: 'Exchange ActiveSync Redirect';                   // see Microsoft.hx
 			case 451: 'Unavailable For Legal Reasons';
 			case 500: 'Internal Server Error';
 			case 501: 'Not Implemented';
