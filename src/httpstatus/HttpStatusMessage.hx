@@ -1,5 +1,6 @@
 package httpstatus;
 
+@:transitive
 abstract HttpStatusMessage(String) from String to String {
 	
 	public inline function new(statusCode:Int) this = fromCode(statusCode);

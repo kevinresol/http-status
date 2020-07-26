@@ -1,6 +1,6 @@
 package httpstatus;
 
-@:enum
+@:enum @:transitive
 abstract HttpStatusCode(Int) from Int {
 	
 	var Continue = 100;
