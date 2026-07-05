@@ -1,7 +1,7 @@
 package httpstatus;
 
-@:enum @:transitive
-abstract HttpStatusCode(Int) from Int {
+@:transitive
+enum abstract HttpStatusCode(Int) from Int {
 	
 	var Continue = 100;
 	var SwitchingProtocols = 101;

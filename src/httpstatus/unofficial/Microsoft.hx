@@ -3,8 +3,7 @@ package httpstatus.unofficial;
 import httpstatus.HttpStatusCode;
 import httpstatus.HttpStatusMessage;
 
-@:enum
-abstract Microsoft(HttpStatusCode) from HttpStatusCode {
+enum abstract Microsoft(HttpStatusCode) from HttpStatusCode {
 
     var SessionTimeout             = 440; // The client's session has expired and must log in again
     var RetryWith                  = 449; // The server cannot honour the request because the user has not provided the required information
